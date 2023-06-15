@@ -1,3 +1,8 @@
 import faunadb from 'faunadb';
+import dotenv from 'dotenv';
 
-const faunadbClient = new faunadb.Client({ secret: 'fnAFGhnUnnACV-NlF_tfqdZRcobfP2jxr5uU_BSO' });
+dotenv.config();
+
+const secretKey : string | undefined = process.env.FAUNADB_SECRET
+
+const faunadbClient = new faunadb.Client({secretKey});
