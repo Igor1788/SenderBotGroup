@@ -31,6 +31,8 @@ const Form = () => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
+
+        
       });
   
       const responseData = await response.json();
@@ -44,6 +46,7 @@ const Form = () => {
     } catch (error) {
       setErrorMessage('An error occurred while registering the data.');
     }
+    console.log(data);
   };
 
   return (
