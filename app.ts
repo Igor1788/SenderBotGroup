@@ -1,10 +1,8 @@
 import express from 'express';
-import cors from 'cors';
 import { registerInDb } from './src/functions/dbReg';
 import faunadb from 'faunadb';
 
 const app = express();
-app.use(cors({ origin: 'https://senderbot.onrender.com:3001' }));
 app.use(express.json());
 
 app.post('/cadastro', async (req, res) => {
