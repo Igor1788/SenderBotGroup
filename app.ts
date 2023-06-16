@@ -1,8 +1,10 @@
 import express from 'express';
 import { registerInDb } from './src/functions/dbReg';
 import faunadb from 'faunadb';
+import cors from 'cors'
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.post('/cadastro', async (req, res) => {
