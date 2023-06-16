@@ -4,7 +4,7 @@ import { registerInDb } from './src/functions/dbReg';
 import faunadb from 'faunadb';
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:3001' }));
+app.use(cors({ origin: 'https://senderbot.onrender.com:3001' }));
 app.use(express.json());
 
 app.post('/cadastro', async (req, res) => {
@@ -41,6 +41,5 @@ app.post('/cadastro', async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log('Server started at http://localhost:3001');
-});
+const port: number = Number(process.env.PORT) || 3000;
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
