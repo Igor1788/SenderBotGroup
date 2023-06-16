@@ -1,5 +1,4 @@
 export interface Db{
-    id: number;
     segmento: string;
     produto: string
     descricao: string;
