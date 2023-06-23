@@ -1,5 +1,5 @@
 import express from 'express';
-import { registerInDb } from './src/functions/dbReg';
+import { registerInDb } from './functions/dbReg';
 import faunadb from 'faunadb';
 import cors from 'cors'
 
