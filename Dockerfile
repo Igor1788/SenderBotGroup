@@ -8,7 +8,10 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm i
+RUN npm install
+
+# Also install devDependencies
+RUN npm install --only=dev
 
 # Copy app source code
 COPY . .
