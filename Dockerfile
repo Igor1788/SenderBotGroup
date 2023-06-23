@@ -4,17 +4,17 @@ FROM node:14
 # Create app directory in Docker
 WORKDIR /app
 
+# Copy app source code
+COPY . .
+
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install app dependencies
+# Install app dependencies including devDependencies
 RUN npm install
 
-# Also install devDependencies
-RUN npm install --only=dev
-
-# Copy app source code
-COPY . .
+# Compile TypeScript to JavaScript
+RUN npm run build
 
 # Expose port and start application
 EXPOSE 3001

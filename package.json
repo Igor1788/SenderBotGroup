@@ -5,9 +5,9 @@
   "main": "index.js",
   "module": "ES6",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node app.ts"
-  },
+    "start": "node dist/app.js",
+    "build": "tsc"
+  },  
   "keywords": [],
   "author": "",
   "license": "ISC",

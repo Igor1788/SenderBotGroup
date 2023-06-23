@@ -1,9 +1,14 @@
 {
-    "compilerOptions": {
-      "target": "es6",                               
-      "module": "commonjs",                          
-      "strict": true,                             
-      "esModuleInterop": true, 
-    }
-  }
-  
+  "compilerOptions": {
+    "target": "es6",                               
+    "module": "commonjs",                          
+    "strict": true,                             
+    "esModuleInterop": true,
+    "outDir": "./dist",   // Adicionado: a pasta onde os arquivos compilados .js serão armazenados
+    "rootDir": "./src",  // Adicionado: a pasta onde os arquivos fonte .ts estão localizados
+    "moduleResolution": "node",  // Adicionado: simula a resolução de módulo do Node.js
+    "resolveJsonModule": true // Adicionado: permite a importação de arquivos .json
+  },
+  "include": ["src/**/*.ts"], // Adicionado: o compilador irá incluir todos os arquivos .ts na pasta src e subpastas
+  "exclude": ["node_modules"] // Adicionado: o compilador irá excluir todos os arquivos na pasta node_modules
+}
