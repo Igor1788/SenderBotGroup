@@ -41,7 +41,7 @@ app.post('/cadastro', async (req, res) => {
   }
 });
 
-const port: number = Number(process.env.PORT) || 3000;
+const port: number = Number(process.env.PORT);
 app.listen(port, '0.0.0.0', () => {
-    console.log(`Server started at http://localhost:${port}`);
+    console.log(`Sevidor rodando em 89.116.225.227:${port}`);
   });
