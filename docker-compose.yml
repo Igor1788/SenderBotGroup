@@ -9,4 +9,3 @@ services:
     environment:
       - TZ=America/Sao_Paulo
     command: npm start
-    volumes: .env:/usr/src/app/.env
