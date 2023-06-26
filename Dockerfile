@@ -7,6 +7,7 @@ COPY package*.json ./
 
 RUN npm i
 RUN npm i typescript -g
+RUN cp .env
 
 
 COPY . .
