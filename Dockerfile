@@ -11,6 +11,7 @@ RUN cp .env
 
 
 COPY . .
+COPY .env ./
 # Porta e script de aplicação
 EXPOSE 3001
 CMD [ "npm", "start" ]
