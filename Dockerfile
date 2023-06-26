@@ -1,21 +1,16 @@
-# Base image
+# Base da imagem do Docker
 FROM node:14
 
-# Create app directory in Docker
 WORKDIR /app
 
-# Copy app source code
 COPY . .
 
-# Copy package.json and package-lock.json
+
 COPY package*.json ./
 
-# Install app dependencies including devDependencies
+
 RUN npm install
 
-# Compile TypeScript to JavaScript
-RUN npm run build
-
-# Expose port and start application
+# Porta e script de aplicação
 EXPOSE 3001
 CMD [ "npm", "start" ]
