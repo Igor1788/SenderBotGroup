@@ -7,11 +7,10 @@ COPY package*.json ./
 
 RUN npm i
 RUN npm i typescript -g
-RUN cp .env
-
 
 COPY . .
 COPY .env ./
+
 # Porta e script de aplicação
 EXPOSE 3001
 CMD [ "npm", "start" ]
